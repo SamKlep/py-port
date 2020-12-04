@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Monoton&display=swap&family=Lato:wght@300&display=swap');
+
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(0, 132, 255) !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.logo {
+    font-family: 'Monoton', cursive;
+    font-size: 1.8rem;
+    padding: 8px;
+}
+
+
+#blogtitle {
+    font-size: 6rem; 
+    font-family: 'Jura', sans-serif;
+}
+
+#hometext {
+    font-family: 'Jura', sans-serif;
+}
+
+.footer {
+    height: 200px;
+}
+
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}

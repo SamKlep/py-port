@@ -1,0 +1,70 @@
+{% extends "portfolio/base.html" %} 
+
+{% load static %} 
+
+{% block content %}
+
+<h1 class="text-center mt-5" id="blogdetailtitle">{{ project.title }}</h1>
+
+<p class="lead">{{ project.full_description|safe }}</p>
+
+<br />
+<hr />
+<br />
+
+<div class="container mb-5">
+  <div class="row justify-content-sm-center">
+    <div class="card">
+ 
+      <div class="card-body">
+        <h5 class="card-title">Tech Used</h5>
+        <p class="card-text">{{ project.tech }}</p>
+      </div>
+      
+      <div class="card-body">
+        <a href="{{ project.github_url }}" class="card-link" target="_blank">Source Code</a>
+        <a href="{{ project.url }}" class="card-link" target="_blank">Visit Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row ">
+  <div class="col-md-9 mx-auto">
+    <a href="{{ project.image_main.url }}" data-lightbox="home-images">
+    <img src="{{ project.image_main.url }}" alt="" class="img-main img-fluid mb-3">
+  </a>
+    <div class="row mt-3 justify-content-sm-center mb-5 thumbs">
+      {% if project.image_1 %}
+      <div class="col-sm-2">
+        <a href="{{ project.image_1.url }}" data-lightbox="home-images">
+          <img src="{{ project.image_1.url }}" alt="" class="img-thumbnail img-fluid">
+        </a>
+      </div>
+      {% endif %}
+      {% if project.image_2 %}
+      <div class="col-sm-2">
+        <a href="{{ project.image_2.url }}" data-lightbox="home-images">
+          <img src="{{ project.image_2.url }}" alt="" class="img-fluid">
+        </a>
+      </div>
+      {% endif %}
+      {% if project.image_3 %}
+      <div class="col-sm-2">
+        <a href="{{ project.image_3.url }}" data-lightbox="home-images">
+          <img src="{{ project.image_3.url }}" alt="" class="img-fluid">
+        </a>
+      </div>
+      {% endif %}
+      </div>
+  </div>
+</div>
+
+
+<a href="{% url 'home' %}" class="btn btn-primary mt-5 mb-4">
+  Go Back</a>
+
+{% endblock %}
