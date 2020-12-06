@@ -25,7 +25,7 @@ SECRET_KEY = '=$eqowzb=$vk(p*%7m6s*hed%r32$-fgvih8_i)q@h^xosvi0*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['samklepdev.pythonanywhere.com']
+ALLOWED_HOSTS = ['www.samklepper.com']
 
 
 # Application definition
